@@ -1,0 +1,13 @@
+*.*~
+*.*ci
+*.i
+Exe/*
+Linker/*
+List/*
+Obj/*
+*.bat
+*.cbi
+*.cof
+*.fct
+*.map
+lib/modbus-rtu-master-library/.hg/*
