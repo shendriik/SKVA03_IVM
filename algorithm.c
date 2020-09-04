@@ -397,13 +397,10 @@ void vSensorToString(UCHAR* str,SensorData* sensor,eeprom UCHAR* text,eeprom UCH
             //value
             value=divmodu10(sensor->Value_x10);
             x=17;   
-            if(value.quot<10 && value.rem!=0)
+            if(value.quot<100 && value.rem!=0)
             {
-                if(value.rem!=0)
-                {
-                    str[x--]=0x30+value.rem; 
-                    str[x--]=','; 
-                }  
+                str[x--]=0x30+value.rem; 
+                str[x--]=','; 
             } 
             start=utoa_fast_div(value.quot,valbuf);
             while(end>=start) str[x--] = *(end--); 
